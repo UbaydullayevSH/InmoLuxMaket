@@ -1,0 +1,118 @@
+{
+    "header": {
+        "btn": "Consultation",
+        "list_1": "Projects",
+        "list_2": "Catalog",
+        "list_3": "About us ",
+        "list_4": "Contacts",
+        "sell": "SELL",
+        "buy": "BUY",
+        "invest": "INVEST"
+    },
+    "hero": {
+        "title": "We sell real estate\nin prestigious areas\nof Marbella",
+        "text": "About the real market price without delays\nand bargaining down by 20–30%",
+        "btn": "Get an appraisal of the property"
+    },
+    "stats": {
+        "text": "Completed deals in\nMarbella and Costa del Sol",
+        "text_2": "Without delays in the documents",
+        "title": "From 7 days",
+        "text_3": "Average sales period - until the deal is closed"
+    },
+    "sell": {
+        "title": "Real estate sales\nin the interests of the owner",
+        "text": "Price, positioning, and negotiations are built around your goal as an owner, not the classifieds market",
+        "suptitle": "To the owner\nof the villa",
+        "suptitle_2": "To the owner\nof the apartments",
+        "suptitle_3": "To the owner\nof the income-generating property",
+        "subtext": "It's difficult to convey the real value of\nthe business; buyers only look at\nthe price, ignoring the potential and income structure",
+        "title_bottom": "What we do:",
+        "title_bottom_2": "We work with the property as\nan investment asset, calculate the economics,\nshow the potential,\nand present the offer to relevant buyers",
+        "subtitle":"Professional appraisal\nand pricing strategy",
+         "btn":"Start personalized selection"
+
+    },
+    "rating": {
+        "title_1": "Full legal and technical verification",
+        "GoodTitle_1": "How we work:",
+        "GoodText_1": "We conduct a full legal and technical verification in advance, including ownership history, urban planning compliance, permits, absence of debts and legal risks. The buyer sees a 'clean' property and makes a decision faster.",
+        "BadTitle_1": "How it often happens on the market:",
+        "BadText_1": "Documents are checked at the final stage, risks appear, and the deal is delayed or falls through.",
+        "title_2": "Property preparation for sale",
+        "GoodTitle_2": "How we work:",
+        "GoodText_2": "We prepare the property as a product: professional photography, well-crafted descriptions, правильное positioning and packaging. We highlight strengths to increase perceived value and build buyer trust.",
+        "BadTitle_2": "How it often happens on the market:",
+        "BadText_2": "The property is listed 'as is' without preparation or presentation. Poor photos, incomplete information, and lack of strategy reduce interest and price.",
+        "title_3": "Access to international buyers",
+        "GoodTitle_3": "How we work:",
+        "GoodText_3": "We promote the property not only locally but also on international platforms. We attract foreign investors, expand reach, and create competition among buyers.",
+        "BadTitle_3": "How it often happens on the market:",
+        "BadText_3": "The sale is limited to local platforms. The audience is narrow, demand is lower, and the property takes longer to sell, often at a lower price."
+    },
+    "process": {
+  "title": "We conduct real estate sales\nas a managed process,",
+  "text": "where each step is predetermined - from valuation to transfer of funds",
+  "subtitle": "Application and initial consultation",
+  "subtext": "We discuss the property, sales goals, and price expectations. We immediately provide feedback on the market and timelines.",
+  "subtitle_2": "Property inspection\nand professional evaluation",
+  "subtext_2": "We carry out an inspection, determine the real market price, and agree on a sales strategy without overpricing or dumping.",
+  "subtitle_3": "Preparing the property\nfor market entry",
+  "subtext_3": "Photos and videos, marketing materials,\nrenderings and concept — if necessary. Your property enters the market prepared, not 'as is'.",
+  "subtitle_4": "Sales launch\nand promotion",
+  "subtext_4": "We work with our own buyer database and a network of 3,000+ partner real estate agencies.\nInmoLux acts as the main coordinator and negotiates in the owner’s interest.",
+  "subtitle_5": "Negotiations, buyer verification,\nand transaction",
+  "subtext_5": "Negotiations without price pressure,\nbuyer verification, transaction control until signing and transfer of funds."
+},
+    "price": {
+        "title": "How quickly we sell, how\nwe form the price and maintain\nconfidentiality",
+        "text": "Answers to questions that concern\nproperty owners before the property is put on the market",
+        "question_1": "How do you determine the price of a property and why don't you lower it for the sake of speed?",
+        "answer_1": "We conduct a thorough market analysis, considering the property's condition, location, supply, and demand. A fair price attracts serious buyers and ensures fast sales without losing value.",
+        "question_2": "Won't the property get stuck if you don't lower the price?",
+        "answer_2": "The correct initial assessment is the key to success. We rarely lower the price because the property immediately finds its buyers. Statistics show that properties with adequate prices sell 30% faster.",
+        "question_3": "How do you protect the owner's interests in negotiations?",
+        "answer_3": "Our experienced commercial department conducts all negotiations, protecting your interests. We control each stage, prevent dishonest offers, and achieve the best terms.",
+        "question_4": "What happens if the buyer is not ready to close the deal?",
+        "answer_4": "We have backup buyer options and develop negotiations with multiple parties simultaneously. If a deal falls through, we quickly offer the property to other interested parties.",
+        "question_5": "How is legal security of the transaction ensured?",
+        "answer_5": "We work with all clients through professional lawyers and notaries. All documents are verified for authenticity, and careful transaction supervision is provided at all stages.",
+        "question_6": "How do you work with the confidentiality of the sale?",
+        "answer_6": "Confidentiality is a priority. Information about the property and owner remains confidential until the contract is signed. Buyers sign a non-disclosure agreement before receiving details.",
+        "question_7": "How long does a sale typically take on average?",
+        "answer_7": "The average sales period is 30-45 days with proper property valuation. In some cases, premium properties sell faster due to our client base."
+    },
+        "review":{
+        "title":"Get a professional\nopinion on selling the property",
+        "text":"We will evaluate your property, the market, and potential interest, and provide honest feedback about the price, timelines, and sales format.",
+        "button":"Request Expert Opinion",
+        "subtext":"No obligations / Confidential / As per your request"
+    },
+    "footer": {
+        "brand": "INMOLUX",
+        "phoneLabel": "Phone",
+        "addressLabel": "Address",
+        "addressLine1": "ABENIO RICARDO SORIANO, 55.",
+        "addressLine2": "29602 MARBELLA, MALAGA.",
+        "emailLabel": "Email",
+        "email": "INFO@INMOLUXGROUP.COM",
+        "workHoursLabel": "Working hours",
+        "workHours": "MON-SUN 08:00 - 22:00",
+        "langLabel": "Language",
+        "menu": {
+            "buyers": "BUYERS",
+            "sellers": "SELLERS",
+            "invest": "INVEST",
+            "projects": "PROJECTS",
+            "about": "ABOUT US",
+            "contacts": "CONTACTS"
+        },
+        "howToGet": "HOW TO GET TO US",
+        "askButton": "ASK A QUESTION",
+        "mapLabel": "Abenio Ricardo Soriano, 55",
+        "paymentLabel": "We accept payment",
+        "copyright": "© 2019–2025 InmoLux",
+        "privacy": "Privacy Policy",
+        "cookiePolicy": "Cookie Policy"
+    }
+}

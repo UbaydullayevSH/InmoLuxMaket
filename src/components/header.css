@@ -1,0 +1,263 @@
+/* Header  */
+
+.header__nav_top.scrolled {
+    background: gainsboro;
+}
+
+.header__nav_top {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    z-index: 50;
+    border-bottom: 1px solid gainsboro;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+
+.header_btn {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background: none;
+    color: #000;
+}
+
+.lang-btn_header {
+    padding: 10px;
+    background: none;
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: #000;
+}
+
+
+.header_icon {
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+
+
+.header__nav_bottom {
+    padding-top: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.menu_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+}
+
+.burger {
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 6000;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: #000;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.burger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(6.5px, 5px);
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6.5px, -5px);
+}
+
+.burger span:nth-child(1) {
+    width: 25px;
+}
+
+.burger span:nth-child(2) {
+    width: 15px;
+}
+
+.burger span:nth-child(3) {
+    width: 25px;
+}
+
+.menu_part {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.set__lang {
+    display: flex;
+    column-gap: 5px;
+    position: relative;
+    align-items: center;
+
+}
+
+.lang__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid gray;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lang__option {
+    z-index: 50000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.lang__option:hover {
+    background: #ddd;
+
+}
+
+.lang-switch {
+    display: flex;
+    gap: 5px;
+}
+
+.lang-btn {
+    padding: 5px;
+    background: none;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+}
+
+.menu_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.mobile-only {
+    display: none;
+}
+
+
+
+/* MEDIA  */
+@media(max-width:1200px) {
+    .burger {
+        display: flex;
+
+    }
+
+    .menu {
+        padding: 0;  
+         margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 350px;
+        background: #ddd;
+        border: 1px solid gainsboro;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 5000;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        -ms-overflow-style: none;
+    }
+
+    .menu::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .menu::-webkit-scrollbar-thumb {
+        background: #555;
+        border-radius: 3px;
+    }
+
+    .menu::-webkit-scrollbar-track {
+        background: #222;
+    }
+
+    .menu.active {
+        transform: translateX(0);
+    }
+
+    .mobile-only {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+}
+
+
+
+@media(max-width:768px) {
+
+    .burger {
+        display: flex;
+    }
+
+
+    .menu {
+        display: flex;
+    }
+
+
+}
