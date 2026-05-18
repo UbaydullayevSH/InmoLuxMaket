@@ -118,11 +118,11 @@ function Main() {
   return (
     <main className="main">
       {/* Hero  */}
-      <section className="hero">
-        <div className="hero__top">
-          <h1 className="hero_title">Девелоперские проекты в Марбелье<br></br>для инвесторов 10–30+ млн </h1>
-          <p className="hero_text">от участка и лицензий до продажи и выхода инвестора</p>
-          <button className="hero_btn">Получить презентацию по project management</button>
+      <section className="investment-hero">
+        <div className="investment-hero__top">
+          <h1 className="investment-hero_title">Девелоперские проекты в Марбелье<br></br>для инвесторов 10–30+ млн </h1>
+          <p className="investment-hero_text">от участка и лицензий до продажи и выхода инвестора</p>
+          <button className="investment-hero_btn">Получить презентацию по project management</button>
         </div>
 
         {/* Carousel */}
