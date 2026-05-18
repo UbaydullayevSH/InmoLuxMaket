@@ -6,7 +6,8 @@ function Layout() {
   return (
     <>
       <Header />
-      <Outlet /> {/* сюда вставляются страницы */}
+      <Outlet /> 
+      {/* сюда вставляются страницы */}
       <Footer />
     </>
   );

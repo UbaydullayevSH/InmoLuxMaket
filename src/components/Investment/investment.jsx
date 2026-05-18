@@ -2,7 +2,7 @@
 import Main from "./Main/main";
 
 
-function Projects() {
+function Investment() {
   return (
     <>
       <Main />
@@ -10,4 +10,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Investment;

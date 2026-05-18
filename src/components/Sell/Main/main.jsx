@@ -6,12 +6,13 @@ import Gallery_2 from "../../../assets/webp/галерея_2.webp";
 import Gallery_3 from "../../../assets/webp/галерея_3.webp";
 import Gallery_4 from "../../../assets/webp/галерея_4.webp";
 import Gallery_5 from "../../../assets/webp/галерея_5.webp";
-import "./main.css";    
+import "./main.css";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { useEffect } from "react";
+
 
 import React from "react"
 function Main() {
@@ -24,6 +25,8 @@ function Main() {
     "Мы подготовим полный пакет документов и индивидуальную маркетинговую стратегию для быстрого и выгодного размещения вашего объекта на рынке.",
     "Оценим текущую рыночную цену, проведём профессиональную фотосъёмку и предложим оптимальные каналы продвижения для привлечения покупателей."
   ];
+
+
 
   function toggleSellAnswer(index) {
     setSellAnswersVisible(prev => {
@@ -460,47 +463,47 @@ function Main() {
       {/* Price  */}
       <section className="price">
         <div className="price__text_box">
-        <h3 className="price_title">{t("price.title").split("\n").map((line, index) => (
-          <React.Fragment key={index}>
-            {line}
-            <br />
-          </React.Fragment>
-        ))}</h3>
-        <p className="price_text">{t("price.text").split("\n").map((line, index) => (
-          <React.Fragment key={index}>
-            {line}
-            <br />
-          </React.Fragment>
-        ))}</p>
+          <h3 className="price_title">{t("price.title").split("\n").map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}</h3>
+          <p className="price_text">{t("price.text").split("\n").map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}</p>
         </div>
         <div className="price__wrapper">
           {/* Menu  */}
           <ul className="price__menu">
-            <PriceAccordion 
+            <PriceAccordion
               question={t("price.question_1")}
               answer={t("price.answer_1")}
             />
-            <PriceAccordion 
+            <PriceAccordion
               question={t("price.question_2")}
               answer={t("price.answer_2")}
             />
-            <PriceAccordion 
+            <PriceAccordion
               question={t("price.question_3")}
               answer={t("price.answer_3")}
             />
-            <PriceAccordion 
+            <PriceAccordion
               question={t("price.question_4")}
               answer={t("price.answer_4")}
             />
-            <PriceAccordion 
+            <PriceAccordion
               question={t("price.question_5")}
               answer={t("price.answer_5")}
             />
-            <PriceAccordion 
+            <PriceAccordion
               question={t("price.question_6")}
               answer={t("price.answer_6")}
             />
-            <PriceAccordion 
+            <PriceAccordion
               question={t("price.question_7")}
               answer={t("price.answer_7")}
             />
@@ -514,19 +517,19 @@ function Main() {
 
           {/* Review top part  */}
           <div className="review__top">
-          <h4 className="review_title">{t("review.title").split("\n").map((line, index) => (
-                <React.Fragment key={index}>
-                  {line}
-                  <br />
-                </React.Fragment>
-              ))}</h4>
-          <p className="review_text">{t("review.text").split("\n").map((line, index) => (
-                <React.Fragment key={index}>
-                  {line}
-                  <br />
-                </React.Fragment>
-              ))}</p>
-              </div>
+            <h4 className="review_title">{t("review.title").split("\n").map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}</h4>
+            <p className="review_text">{t("review.text").split("\n").map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}</p>
+          </div>
 
           {/* Review bottom part  */}
           <div className="review__bottom">

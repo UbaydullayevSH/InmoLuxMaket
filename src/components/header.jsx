@@ -2,13 +2,21 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./header.css"
 import i18n from "./i18n/i18njs/i18n";
-
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Icon from "../assets/svg/иконка.svg"
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const goToInvestment = () => {
+    navigate("/investment");
+  };
+
+  const goToSell = () => {
+    navigate("/");
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -130,9 +138,15 @@ function Header() {
       {/* Нижняя навигация */}
       <nav className="header__nav_bottom">
         <ul className="menu_bottom">
-          <li className="menu_list">{t("header.sell")}</li>
-          <li className="menu_list">{t("header.buy")}</li>
-          <li className="menu_list">{t("header.invest")}</li>
+          <li className="menu_list"><a href="#" onClick={(e) => { e.preventDefault(); goToSell(); }}>
+            {t("header.sell")}
+          </a></li>
+          <li className="menu_list"><a href="#">
+            {t("header.buy")}
+          </a></li>
+          <li className="menu_list"><a href="#" onClick={(e) => { e.preventDefault(); goToInvestment(); }}>
+            {t("header.invest")}
+          </a></li>
         </ul>
       </nav>
     </header>

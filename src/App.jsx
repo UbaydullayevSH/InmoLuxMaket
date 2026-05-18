@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./components/Home/home";
-import Project from "./components/Projects/projects";
+import Sell from "./components/Sell/sell";
+import Investment from "./components/Investment/investment";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="project" element={<Project />} />
+        <Route index element={<Sell />} />
+        <Route path="investment" element={<Investment />} />
       </Route>
     </Routes>
   );

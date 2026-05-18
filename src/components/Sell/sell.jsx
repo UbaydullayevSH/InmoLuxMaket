@@ -2,7 +2,7 @@
 import Main from "./Main/main";
 
 
-function Home() {
+function Sell() {
   return (
     <>
     <div>
@@ -13,4 +13,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Sell;
