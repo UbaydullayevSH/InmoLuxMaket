@@ -1,11 +1,11 @@
 import "./main.css";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useRef } from "react";
-import Swiper_1 from "../../../assets/png/Swiper_1.png";
-import Swiper_2 from "../../../assets/png/Swiper_2.png";
-import Swiper_3 from "../../../assets/png/Swiper_3.png";
-import Swiper_4 from "../../../assets/png/Swiper_4.png";
-import Swiper_5 from "../../../assets/png/Swiper_5.png";
+import Swiper_1 from "../../../assets/png/swiper_1.png";
+import Swiper_2 from "../../../assets/png/swiper_2.png";
+import Swiper_3 from "../../../assets/png/swiper_3.png";
+import Swiper_4 from "../../../assets/png/swiper_4.png";
+import Swiper_5 from "../../../assets/png/swiper_5.png";
 
 function Main() {
   const { t } = useTranslation();
