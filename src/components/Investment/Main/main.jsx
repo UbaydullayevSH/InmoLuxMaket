@@ -1,6 +1,6 @@
 import "./main.css";
 import { useTranslation } from "react-i18next";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Swiper_1 from "../../../assets/png/swiper_1.png";
 import Swiper_2 from "../../../assets/png/swiper_2.png";
 import Swiper_3 from "../../../assets/png/swiper_3.png";
@@ -11,10 +11,6 @@ function Main() {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [dragOffset, setDragOffset] = useState(0);
-  const carouselRef = useRef(null);
 
   const images = [Swiper_1, Swiper_2, Swiper_3, Swiper_4, Swiper_5];
 
@@ -36,70 +32,6 @@ function Main() {
   }, []);
 
   const maxIndex = Math.max(0, images.length - itemsPerView);
-
-  // Mouse handlers
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.clientX);
-    setDragOffset(0);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    
-    const currentX = e.clientX;
-    const diff = currentX - startX;
-    setDragOffset(diff);
-  };
-
-  const handleMouseUp = (e) => {
-    setIsDragging(false);
-    
-    const currentX = e.clientX;
-    const diff = currentX - startX;
-    const threshold = 50;
-
-    if (diff > threshold) {
-      // Свайп вправо - предыдущие карточки
-      prevSlide();
-    } else if (diff < -threshold) {
-      // Свайп влево - следующие карточки
-      nextSlide();
-    }
-    
-    setDragOffset(0);
-  };
-
-  // Touch handlers
-  const handleTouchStart = (e) => {
-    setIsDragging(true);
-    setStartX(e.touches[0].clientX);
-    setDragOffset(0);
-  };
-
-  const handleTouchMove = (e) => {
-    if (!isDragging) return;
-    
-    const currentX = e.touches[0].clientX;
-    const diff = currentX - startX;
-    setDragOffset(diff);
-  };
-
-  const handleTouchEnd = (e) => {
-    setIsDragging(false);
-    
-    const currentX = e.changedTouches[0].clientX;
-    const diff = currentX - startX;
-    const threshold = 50;
-
-    if (diff > threshold) {
-      prevSlide();
-    } else if (diff < -threshold) {
-      nextSlide();
-    }
-    
-    setDragOffset(0);
-  };
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -126,30 +58,39 @@ function Main() {
         </div>
 
         {/* Carousel */}
-        <div 
-          className={`carousel-container ${isDragging ? 'dragging' : ''}`}
-          ref={carouselRef}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          <div className="carousel-wrapper">
-            <div className="carousel-track" style={{ transform: `translateX(${dragOffset}px)` }}>
-              {visibleImages.map((image, index) => (
-                <div key={index} className="carousel-item">
-                  <img 
-                    src={image} 
-                    alt={`Slide ${currentIndex + index + 1}`}
-                    className="carousel-image"
-                    draggable="false"
-                  />
-                </div>
-              ))}
+        <div className="carousel-section">
+          <div className="carousel-container">
+            <div className="carousel-wrapper">
+              <div className="carousel-track">
+                {visibleImages.map((image, index) => (
+                  <div key={index} className="carousel-item">
+                    <img 
+                      src={image} 
+                      alt={`Slide ${currentIndex + index + 1}`}
+                      className="carousel-image"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
+          </div>
+
+          {/* Navigation Buttons */}
+          <div className="carousel-nav">
+            <button 
+              className="carousel-btn carousel-btn--prev"
+              onClick={prevSlide}
+              aria-label="Previous slide"
+            >
+              ←
+            </button>
+            <button 
+              className="carousel-btn carousel-btn--next"
+              onClick={nextSlide}
+              aria-label="Next slide"
+            >
+              →
+            </button>
           </div>
         </div>
       </section>
