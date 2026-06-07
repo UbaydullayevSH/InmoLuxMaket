@@ -29,9 +29,8 @@
         "subtext": "It's difficult to convey the real value of\nthe business; buyers only look at\nthe price, ignoring the potential and income structure",
         "title_bottom": "What we do:",
         "title_bottom_2": "We work with the property as\nan investment asset, calculate the economics,\nshow the potential,\nand present the offer to relevant buyers",
-        "subtitle":"Professional appraisal\nand pricing strategy",
-         "btn":"Start personalized selection"
-
+        "subtitle": "Professional appraisal\nand pricing strategy",
+        "btn": "Start personalized selection"
     },
     "rating": {
         "title_1": "Full legal and technical verification",
@@ -51,19 +50,19 @@
         "BadText_3": "The sale is limited to local platforms. The audience is narrow, demand is lower, and the property takes longer to sell, often at a lower price."
     },
     "process": {
-  "title": "We conduct real estate sales\nas a managed process,",
-  "text": "where each step is predetermined - from valuation to transfer of funds",
-  "subtitle": "Application and initial consultation",
-  "subtext": "We discuss the property, sales goals, and price expectations. We immediately provide feedback on the market and timelines.",
-  "subtitle_2": "Property inspection\nand professional evaluation",
-  "subtext_2": "We carry out an inspection, determine the real market price, and agree on a sales strategy without overpricing or dumping.",
-  "subtitle_3": "Preparing the property\nfor market entry",
-  "subtext_3": "Photos and videos, marketing materials,\nrenderings and concept — if necessary. Your property enters the market prepared, not 'as is'.",
-  "subtitle_4": "Sales launch\nand promotion",
-  "subtext_4": "We work with our own buyer database and a network of 3,000+ partner real estate agencies.\nInmoLux acts as the main coordinator and negotiates in the owner’s interest.",
-  "subtitle_5": "Negotiations, buyer verification,\nand transaction",
-  "subtext_5": "Negotiations without price pressure,\nbuyer verification, transaction control until signing and transfer of funds."
-},
+        "title": "We conduct real estate sales\nas a managed process,",
+        "text": "where each step is predetermined - from valuation to transfer of funds",
+        "subtitle": "Application and initial consultation",
+        "subtext": "We discuss the property, sales goals, and price expectations. We immediately provide feedback on the market and timelines.",
+        "subtitle_2": "Property inspection\nand professional evaluation",
+        "subtext_2": "We carry out an inspection, determine the real market price, and agree on a sales strategy without overpricing or dumping.",
+        "subtitle_3": "Preparing the property\nfor market entry",
+        "subtext_3": "Photos and videos, marketing materials,\nrenderings and concept — if necessary. Your property enters the market prepared, not 'as is'.",
+        "subtitle_4": "Sales launch\nand promotion",
+        "subtext_4": "We work with our own buyer database and a network of 3,000+ partner real estate agencies.\nInmoLux acts as the main coordinator and negotiates in the owner’s interest.",
+        "subtitle_5": "Negotiations, buyer verification,\nand transaction",
+        "subtext_5": "Negotiations without price pressure,\nbuyer verification, transaction control until signing and transfer of funds."
+    },
     "price": {
         "title": "How quickly we sell, how\nwe form the price and maintain\nconfidentiality",
         "text": "Answers to questions that concern\nproperty owners before the property is put on the market",
@@ -82,11 +81,11 @@
         "question_7": "How long does a sale typically take on average?",
         "answer_7": "The average sales period is 30-45 days with proper property valuation. In some cases, premium properties sell faster due to our client base."
     },
-        "review":{
-        "title":"Get a professional\nopinion on selling the property",
-        "text":"We will evaluate your property, the market, and potential interest, and provide honest feedback about the price, timelines, and sales format.",
-        "button":"Request Expert Opinion",
-        "subtext":"No obligations / Confidential / As per your request"
+    "review": {
+        "title": "Get a professional\nopinion on selling the property",
+        "text": "We will evaluate your property, the market, and potential interest, and provide honest feedback about the price, timelines, and sales format.",
+        "button": "Request Expert Opinion",
+        "subtext": "No obligations / Confidential / As per your request"
     },
     "footer": {
         "brand": "INMOLUX",
@@ -114,5 +113,50 @@
         "copyright": "© 2019–2025 InmoLux",
         "privacy": "Privacy Policy",
         "cookiePolicy": "Cookie Policy"
+    },
+    "project": {
+        "title": "Completed and ongoing\nprojects in Marbella",
+        "description_1": "Paraiso-Alto — a well-developed area,\nknown for its natural beauty,\nsecurity and high quality of life. In\na few minutes drive from the lively nightlife\nof Puerto Banus, private schools and supermarkets.",
+        "description_2": "Elegant apartments in the prestigious Marbella area.\nPanoramic views, high-quality finishing\nand access to the best beaches and restaurants.",
+        "description_3": "Villa with a pool — Marbella Club.\nSpacious rooms, modern equipment\nand stylish design.",
+        "description_4": "Luxury apartment — Golden Mile.\nConvenient location, high level of comfort\nand access to the best real estate properties.",
+        "description_5": "Villa with a wine cellar — Sierra Blanca.\nElegant design, spacious rooms\nand unique atmosphere.",
+        "description_6": "Cottage by the sea — Estepona.\nStylish location, modern amenities\nand beautiful sea views.",
+        "description_7": "Penthouse with terrace — New Golden Mile.\nElegant design,\nspacious rooms and unique atmosphere.",
+        "description_8": "Villa with a garden — Cascada de Camojan.\nSpacious rooms, modern equipment\nand stylish design.",
+        "description_9": "Modern house — Benahavís.\nMinimalist design, technologically advanced facilities\nand maximum comfort.",
+        "description_10": "Luxury penthouse — Benalmádena.\nPanoramic views, high-quality finishing\nand access to the best beaches and restaurants.",
+        "beds": "Beds",
+        "plot": "Plot",
+        "baths": "Baths",
+        "area": "Living Area",
+        "title_1": "Paraiso-Alto — a prestigious area of Marbella",
+        "title_2": "Modern penthouse — Puerto Banus",
+        "title_3": "Villa with a pool — Marbella Club",
+        "title_4": "Luxury apartment — Golden Mile",
+        "title_5": "Villa with a wine cellar — Sierra Blanca",
+        "title_6": "Cottage by the sea — Estepona",
+        "title_7": "Penthouse with terrace — New Golden Mile",
+        "title_8": "Villa with a garden — Cascada de Camojan",
+        "title_9": "Modern house — Benahavís",
+        "title_10": "Luxury penthouse — Benalmádena",
+        "btn_more_info": "More Information",
+        "type_1": "villa",
+        "type_2": "apartment",
+        "type_3": "villa",
+        "type_4": "apartment",
+        "type_5": "villa",
+        "type_6": "cottage",
+        "type_7": "penthouse",
+        "type_8": "villa",
+        "type_9": "villa",
+        "type_10": "apartment"
+    },
+    "project_alt": {
+        "title": "New development — Marbella Prime",
+        "type": "Residential complex",
+        "description": "Luxury development with sea views\nReady for investment",
+        "price": "€ 6,500,000",
+        "btn_more_info": "Learn More"
     }
 }
