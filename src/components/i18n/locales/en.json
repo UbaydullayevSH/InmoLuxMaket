@@ -159,4 +159,16 @@
         "price": "€ 6,500,000",
         "btn_more_info": "Learn More"
     }
+
+    ,
+        "mobile": {
+        "item1_title": "Search and selection",
+        "item1_text": "Search of plots and projects. Location and market analysis. Preliminary demand assessment and investment potential evaluation.",
+        "item2_title": "Due diligence",
+        "item2_text": "Land and project due diligence, permits, risks and economic model.",
+        "item3_title": "Management",
+        "item3_text": "Project management, contractors, timeline and budget control."
+    }
 }
+
+

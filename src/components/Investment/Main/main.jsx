@@ -15,6 +15,13 @@ import MainCarousel from "../../../assets/png/main_carousel.png";
 import Nedvizhimost_1 from "../../../assets/png/недвижимость_1.png";
 import Nedvizhimost_2 from "../../../assets/png/недвижимость_2.png";
 
+// Mobile Swiper 
+import MobileSwiper_1 from "../../../assets/png/mobile_swiper_1.png";
+import MobileSwiper_2 from "../../../assets/png/mobile_swiper_2.png";
+import MobileSwiper_3 from "../../../assets/png/mobile_swiper_3.png";
+
+// Private Image 
+import PrivateImage from "../../../assets/png/private_image.png";
 function Main() {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,14 +35,14 @@ function Main() {
   const projectsData = [
     {
       id: 1,
-      title:t("project.title_1"),
-      type:t("project.type_1"),
-      description:t("project.description_1").split("\n").map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  )),
+      title: t("project.title_1"),
+      type: t("project.type_1"),
+      description: t("project.description_1").split("\n").map((line, index) => (
+        <React.Fragment key={index}>
+          {line}
+          <br />
+        </React.Fragment>
+      )),
       beds: "6",
       plot: "1915 m2",
       baths: "7",
@@ -48,11 +55,11 @@ function Main() {
       title: t("project.title_2"),
       type: t("project.type_2"),
       description: t("project.description_2").split("\n").map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  )),
+        <React.Fragment key={index}>
+          {line}
+          <br />
+        </React.Fragment>
+      )),
       beds: "4",
       plot: "500 m2",
       baths: "3",
@@ -65,11 +72,11 @@ function Main() {
       title: t("project.title_3"),
       type: t("project.type_3"),
       description: t("project.description_3").split("\n").map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  )),
+        <React.Fragment key={index}>
+          {line}
+          <br />
+        </React.Fragment>
+      )),
       beds: "5",
       plot: "2000 m2",
       baths: "5",
@@ -82,11 +89,11 @@ function Main() {
       title: t("project.title_4"),
       type: t("project.type_4"),
       description: t("project.description_4").split("\n").map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  )),
+        <React.Fragment key={index}>
+          {line}
+          <br />
+        </React.Fragment>
+      )),
       beds: "3",
       plot: "350 m2",
       baths: "2",
@@ -97,14 +104,14 @@ function Main() {
     {
       id: 5,
       title: t("project.title_5"),
-      type:t("project.type_5"),
+      type: t("project.type_5"),
       description: t("project.description_5").split("\n").map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  )),
-      beds:"7",
+        <React.Fragment key={index}>
+          {line}
+          <br />
+        </React.Fragment>
+      )),
+      beds: "7",
       plot: "3000 m2",
       baths: "6",
       area: "1200 m2",
@@ -116,11 +123,11 @@ function Main() {
       title: t("project.title_6"),
       type: t("project.type_6"),
       description: t("project.description_6").split("\n").map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  )),
+        <React.Fragment key={index}>
+          {line}
+          <br />
+        </React.Fragment>
+      )),
       beds: "4",
       plot: "1200 m2",
       baths: "3",
@@ -133,11 +140,11 @@ function Main() {
       title: t("project.title_7"),
       type: t("project.type_7"),
       description: t("project.description_7").split("\n").map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  )),
+        <React.Fragment key={index}>
+          {line}
+          <br />
+        </React.Fragment>
+      )),
       beds: "3",
       plot: "400 m2",
       baths: "3",
@@ -150,11 +157,11 @@ function Main() {
       title: t("project.title_8"),
       type: t("project.type_8"),
       description: t("project.description_8").split("\n").map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  )),
+        <React.Fragment key={index}>
+          {line}
+          <br />
+        </React.Fragment>
+      )),
       beds: "6",
       plot: "2500 m2",
       baths: "5",
@@ -167,11 +174,11 @@ function Main() {
       title: t("project.title_9"),
       type: t("project.type_9"),
       description: t("project.description_9").split("\n").map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  )),
+        <React.Fragment key={index}>
+          {line}
+          <br />
+        </React.Fragment>
+      )),
       beds: "5",
       plot: "1800 m2",
       baths: "4",
@@ -184,11 +191,11 @@ function Main() {
       title: t("project.title_10"),
       type: t("project.type_10"),
       description: t("project.description_10").split("\n").map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  )),
+        <React.Fragment key={index}>
+          {line}
+          <br />
+        </React.Fragment>
+      )),
       beds: "4",
       plot: "450 m2",
       baths: "3",
@@ -202,6 +209,59 @@ function Main() {
   const currentProject2 = projectsData[currentProjectIndex2];
   const secondCarouselImages = [MainCarousel, Swiper_1, Swiper_2, Swiper_3, Swiper_4, Swiper_5];
   const currentSecondCarouselImage = secondCarouselImages[currentProjectIndex2 % secondCarouselImages.length];
+
+  // Mobile items for private invest section (image + text toggle)
+  const mobileItems = [
+    {
+      id: 1,
+      image: MobileSwiper_1,
+      title: t("mobile.item1_title") || "Поиск и отбор",
+      text:
+      t("mobile.item1_text").split("\n").map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        )) ||
+        "Поиск участков и проектов. Анализ локации и рыночного спроса. Предварительная оценка инвестиционного потенциала."
+    },
+    {
+      id: 2,
+      image: MobileSwiper_2,
+      title: t("mobile.item2_title") || "Due diligence",
+      text:
+        t("mobile.item2_text").split("\n").map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        )) ||
+        "Проверка земли и проекта, лицензии, риски и экономическая модель."
+    },
+    {
+      id: 3,
+      image: MobileSwiper_3,
+      title: t("mobile.item3_title") || "Управление",
+      text:
+        t("mobile.item3_text").split("\n").map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        )) ||
+        "Управление проектом, подрядчики, контроль сроков и бюджета."
+    }
+  ];
+
+  const [mobileShowImage, setMobileShowImage] = useState(mobileItems.map(() => true));
+
+  const toggleMobileItem = (index) => {
+    setMobileShowImage((prev) => {
+      const copy = [...prev];
+      copy[index] = !copy[index];
+      return copy;
+    });
+  };
 
   // Динамически менять количество карточек при изменении размера окна
   useEffect(() => {
@@ -348,11 +408,11 @@ function Main() {
       <section className="project">
 
         <h2 className="project_title">{t("project.title").split("\n").map((line, index) => (
-                      <React.Fragment key={index}>
-                        {line}
-                        <br />
-                      </React.Fragment>
-                    ))}</h2>
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}</h2>
         <div className="project__wrapper">
           {/* Info Part  */}
           <div className="project_info">
@@ -360,10 +420,10 @@ function Main() {
             <span className="project_span">{currentProject1.type}</span>
             <p className="project_text">{currentProject1.description}</p>
             <div className="span_box">
-          <span className="project_span">{t("project.beds")} /{currentProject1.beds}</span>
-            <span className="project_span">{t("project.plot")}  /{currentProject1.plot}</span>
-            <span className="project_span">{t("project.baths")}  /{currentProject1.baths}</span>
-            <span className="project_span">{t("project.area")}   /{currentProject1.area}</span>
+              <span className="project_span">{t("project.beds")} /{currentProject1.beds}</span>
+              <span className="project_span">{t("project.plot")}  /{currentProject1.plot}</span>
+              <span className="project_span">{t("project.baths")}  /{currentProject1.baths}</span>
+              <span className="project_span">{t("project.area")}   /{currentProject1.area}</span>
             </div>
             <p className="project_price">{currentProject1.price}</p>
             <button className="project_btn">{t("project.btn_more_info")}</button>
@@ -374,18 +434,18 @@ function Main() {
           <div className="carousel_section">
             {/* Project Image */}
             <img src={currentProject1.image} alt={currentProject1.title} className="project_image" />
-            
+
             {/* Icons/Buttons  */}
             <div className="icons_box">
-              <button 
-                className="icon_btn" 
+              <button
+                className="icon_btn"
                 onClick={prevProject1}
                 aria-label="Previous project"
               >
                 <i className="fa-solid fa-chevron-left"></i>
               </button>
-              <button 
-                className="icon_btn" 
+              <button
+                className="icon_btn"
                 onClick={nextProject1}
                 aria-label="Next project"
               >
@@ -399,8 +459,8 @@ function Main() {
                 {String(currentProjectIndex1 + 1).padStart(2, '0')}/{String(projectsData.length).padStart(2, '0')}
               </span>
               <div className="progress_bar">
-                <div 
-                  className="progress_fill" 
+                <div
+                  className="progress_fill"
                   style={{ width: `${progressPercentage1}%` }}
                 ></div>
               </div>
@@ -408,66 +468,112 @@ function Main() {
           </div>
 
         </div>
-      </section> 
-      
-        {/* Projects 2  (alternative styling and independent carousel) */}
-        <section className="project project--alt">
-          <div className="project__wrapper project__wrapper--alt">
-                    {/* Carousel Part  */}
-            <div className="carousel_section carousel_section--alt">
-              {/* Project Image */}
-              <img src={currentSecondCarouselImage} alt={currentProject2.title} className="project_image project_image--alt" />
-            
-              {/* Icons/Buttons  */}
-              <div className="icons_box icons_box--alt">
-                <button 
-                  className="icon_btn" 
-                  onClick={prevProject2}
-                  aria-label="Previous project"
-                >
-                  <i className="fa-solid fa-chevron-left"></i>
-                </button>
-                <button 
-                  className="icon_btn" 
-                  onClick={nextProject2}
-                  aria-label="Next project"
-                >
-                  <i className="fa-solid fa-chevron-right"></i>
-                </button>
-              </div>
+      </section>
 
-              {/* Quantity and Progress */}
-              <div className="quantity_section quantity_section--alt">
-                <span className="quantity">
-                  {String(currentProjectIndex2 + 1).padStart(2, '0')}/{String(projectsData.length).padStart(2, '0')}
-                </span>
-                <div className="progress_bar">
-                  <div 
-                    className="progress_fill" 
-                    style={{ width: `${progressPercentage2}%` }}
-                  ></div>
-                </div>
+      {/* Projects 2  (alternative styling and independent carousel) */}
+      <section className="project project--alt">
+        <div className="project__wrapper project__wrapper--alt">
+          {/* Carousel Part  */}
+          <div className="carousel_section carousel_section--alt">
+            {/* Project Image */}
+            <img src={currentSecondCarouselImage} alt={currentProject2.title} className="project_image project_image--alt" />
+
+            {/* Icons/Buttons  */}
+            <div className="icons_box icons_box--alt">
+              <button
+                className="icon_btn"
+                onClick={prevProject2}
+                aria-label="Previous project"
+              >
+                <i className="fa-solid fa-chevron-left"></i>
+              </button>
+              <button
+                className="icon_btn"
+                onClick={nextProject2}
+                aria-label="Next project"
+              >
+                <i className="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+
+            {/* Quantity and Progress */}
+            <div className="quantity_section quantity_section--alt">
+              <span className="quantity">
+                {String(currentProjectIndex2 + 1).padStart(2, '0')}/{String(projectsData.length).padStart(2, '0')}
+              </span>
+              <div className="progress_bar">
+                <div
+                  className="progress_fill"
+                  style={{ width: `${progressPercentage2}%` }}
+                ></div>
               </div>
             </div>
-            {/* Info Part  */}
-            <div className="project_info project_info--alt">
-              <h4 className="project_suptitle">{currentProject2.title}</h4>
-              <span className="project_span">{currentProject2.type}</span>
-              <p className="project_text">{currentProject2.description}</p>
-              <div className="span_box">
+          </div>
+          {/* Info Part  */}
+          <div className="project_info project_info--alt">
+            <h4 className="project_suptitle">{currentProject2.title}</h4>
+            <span className="project_span">{currentProject2.type}</span>
+            <p className="project_text">{currentProject2.description}</p>
+            <div className="span_box">
               <span className="project_span">{t("project.beds")} / {currentProject2.beds}</span>
               <span className="project_span">{t("project.plot")} / {currentProject2.plot}</span>
               <span className="project_span">{t("project.baths")} / {currentProject2.baths}</span>
               <span className="project_span">{t("project.area")} / {currentProject2.area}</span>
-              </div>
-              <p className="project_price">{currentProject2.price}</p>
-              <button className="project_btn">{t("project.btn_more_info")}</button>
-
             </div>
-
+            <p className="project_price">{currentProject2.price}</p>
+            <button className="project_btn">{t("project.btn_more_info")}</button>
 
           </div>
-        </section>
+
+
+        </div>
+      </section>
+
+      {/* Private Investment  */}
+      <section className="private_invest">
+        <h3 className="private_invest_title">Для частных инвесторов, family offices и девелоперов</h3>
+        <div className="private_invest__wrapper desktop-only">
+          <div className="private_invest_info">
+            <div className="invest_info_list">
+              <h4 className="invest_info_title">Запрос</h4>
+              <p className="invest_info_text">Есть капитал и интерес к девелопменту<br></br>в Марбелье, но нет желания<br></br>погружаться в лицензии,<br></br>подрядчиков и управление проектом</p>
+            </div>
+
+            <div className="invest_info_list">
+              <h4 className="invest_info_title">Результат INMOLUX</h4>
+              <p className="invest_info_text">Структурированный девелоперский<br></br>проект под ключ ROI 35–40% без плеча,<br></br>цикл 2–3 года с понятной экономикой<br></br>и сценарием выхода</p>
+            </div>
+
+          </div>
+          <img src={PrivateImage} alt="Private Investment" className="private_invest_image" />
+        </div>
+
+        <div className="private_invest_mobile mobile-only">
+          {mobileItems.map((item, idx) => (
+            <div className="private_invest_card mobile-item" key={item.id}>
+              <div className={`private_invest_bg mobile-media ${mobileShowImage[idx] ? 'show-image' : 'show-text'}`}>
+                {mobileShowImage[idx] ? (
+                  <img src={item.image} alt={item.title} className="private_invest_image mobile-image" />
+                ) : (
+                  <div className="mobile-text">
+                    <h4 className="private_invest_card_title">{item.title}</h4>
+                    <ul className="private_invest_card_list">
+                      <li className="private_invest_card_item">{item.text}</li>
+                    </ul>
+                  </div>
+                )}
+                <button
+                  className="mobile-toggle-btn"
+                  onClick={(e) => { e.stopPropagation(); toggleMobileItem(idx); }}
+                  aria-label={mobileShowImage[idx] ? 'Показать текст' : 'Показать изображение'}
+                >
+                  {mobileShowImage[idx] ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-plus"></i>}
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
