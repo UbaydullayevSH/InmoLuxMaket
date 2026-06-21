@@ -89,8 +89,8 @@ function Header() {
                 RU
               </button>
               <button
-                className={`lang-btn_header ${lang === "uz" ? "active" : ""}`}
-                onClick={() => changeLanguage("uz")}
+                className={`lang-btn_header ${lang === "en" ? "active" : ""}`}
+                onClick={() => changeLanguage("en")}
               >
                 EN
               </button>

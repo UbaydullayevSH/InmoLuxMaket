@@ -79,8 +79,8 @@ function Footer() {
                 RU
               </button>
               <button
-                className={`lang-btn ${lang === "uz" ? "active" : ""}`}
-                onClick={() => changeLanguage("uz")}
+                className={`lang-btn ${lang === "en" ? "active" : ""}`}
+                onClick={() => changeLanguage("en")}
               >
                 EN
               </button>
@@ -91,7 +91,12 @@ function Footer() {
         <div className="footer__bottom-row">
           <div className="footer__map-block">
             <div className="footer__section-title">{t("footer.howToGet")}</div>
-            <button className="footer__action-btn">{t("footer.askButton")}</button>
+            <p className="footer__chat-title">{t("footer.chatTitle")}</p>
+            <p className="footer__chat-text">{t("footer.chatText")}</p>
+            <div className="footer__map-actions">
+              <button className="footer__action-btn">{t("footer.askButton")}</button>
+              <button className="footer__chat-btn">{t("footer.chatButton")}</button>
+            </div>
           </div>
           <div className="footer__map">
             <iframe

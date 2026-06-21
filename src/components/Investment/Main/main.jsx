@@ -271,33 +271,33 @@ function Main() {
   const devItems = [
     {
       id: 1,
-      q: 'Анализ участка и инвест. потенциала',
-      a: 'Оцениваем локацию, зонирование, ограничения и потенциал застройки. Быстрый отсеев слабых участков и понимание реального потенциала.'
+      q: t("development.q_1"),
+      a: t("development.a_1")
     },
     {
       id: 2,
-      q: 'Архитектурная концепция',
-      a: 'Разрабатываем концепцию, планировочные решения и визуализации, которые согласуются с экономикой проекта.'
+      q: t("development.q_2"),
+      a: t("development.a_2")
     },
     {
       id: 3,
-      q: 'Лицензии и согласования',
-      a: 'Координируем подготовку документов и согласований с властями и подрядчиками.'
+      q: t("development.q_3"),
+      a: t("development.a_3")
     },
     {
       id: 4,
-      q: 'Строительство частных домов под ключ',
-      a: 'Управляем подрядчиками, графиками и качеством строительства.'
+      q: t("development.q_4"),
+      a: t("development.a_4")
     },
     {
       id: 5,
-      q: 'Маркетинг, продажи и выход',
-      a: 'Готовим маркетинговую стратегию, продажи и планируем сценарии выхода для инвесторов.'
+      q: t("development.q_5"),
+      a: t("development.a_5")
     },
     {
       id: 6,
-      q: 'Финансовая модель и структура капитала',
-      a: 'Структурируем капитал, готовим прозрачную экономику и сценарии доходности.'
+      q: t("development.q_6"),
+      a: t("development.a_6")
     }
   ];
 
@@ -382,9 +382,14 @@ function Main() {
       {/* Hero  */}
       <section className="investment-hero">
         <div className="investment-hero__top">
-          <h1 className="investment-hero_title">Девелоперские проекты в Марбелье<br></br>для инвесторов 10–30+ млн </h1>
-          <p className="investment-hero_text">от участка и лицензий до продажи и выхода инвестора</p>
-          <button className="investment-hero_btn">Получить презентацию по управлению проектами</button>
+          <h1 className="investment-hero_title">{t("investmentHero.title").split("\n").map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}</h1>
+          <p className="investment-hero_text">{t("investmentHero.text")}</p>
+          <button className="investment-hero_btn">{t("investmentHero.button")}</button>
         </div>
 
         {/* Carousel */}
@@ -430,20 +435,20 @@ function Main() {
         <div className="card__wrapper">
           {/* The First Card  */}
           <div className="card__wrapper_list">
-            <h2 className="card_title">ROI 35–40%</h2>
-            <p className="card_text">Без использования кредитного плеча</p>
+            <h2 className="card_title">{t("investmentCard.title_1")}</h2>
+            <p className="card_text">{t("investmentCard.text_1")}</p>
           </div>
 
           {/* The Second Card  */}
           <div className="card__wrapper_list">
-            <h2 className="card_title">2–3 года</h2>
-            <p className="card_text">Без использования кредитного плеча</p>
+            <h2 className="card_title">{t("investmentCard.title_2")}</h2>
+            <p className="card_text">{t("investmentCard.text_2")}</p>
           </div>
 
           {/* The Third Card  */}
           <div className="card__wrapper_list">
-            <h2 className="card_title">200+ млн €</h2>
-            <p className="card_text">Без использования кредитного плеча</p>
+            <h2 className="card_title">{t("investmentCard.title_3")}</h2>
+            <p className="card_text">{t("investmentCard.text_3")}</p>
           </div>
         </div>
       </section>
@@ -575,21 +580,35 @@ function Main() {
 
       {/* Private Investment  */}
       <section className="private_invest">
-        <h3 className="private_invest_title">Для частных инвесторов, family offices и девелоперов</h3>
+        <h3 className="private_invest_title">{t("privateInvestment.title")}</h3>
         <div className="private_invest__wrapper desktop-only">
           <div className="private_invest_info">
             <div className="invest_info_list">
-              <h4 className="invest_info_title">Запрос</h4>
-              <p className="invest_info_text">Есть капитал и интерес к девелопменту<br></br>в Марбелье, но нет желания<br></br>погружаться в лицензии,<br></br>подрядчиков и управление проектом</p>
+              <h4 className="invest_info_title">{t("privateInvestment.request.title")}</h4>
+              <p className="invest_info_text">
+                {t("privateInvestment.request.text").split("\n").map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </p>
             </div>
 
             <div className="invest_info_list">
-              <h4 className="invest_info_title">Результат INMOLUX</h4>
-              <p className="invest_info_text">Структурированный девелоперский<br></br>проект под ключ ROI 35–40% без плеча,<br></br>цикл 2–3 года с понятной экономикой<br></br>и сценарием выхода</p>
+              <h4 className="invest_info_title">{t("privateInvestment.result.title")}</h4>
+              <p className="invest_info_text">
+                {t("privateInvestment.result.text").split("\n").map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </p>
             </div>
 
           </div>
-          <img src={PrivateImage} alt="Private Investment" className="private_invest_image" />
+          <img src={PrivateImage} alt={t("privateInvestment.imageAlt")} className="private_invest_image" />
         </div>
 
         <div className="private_invest_mobile mobile-only">
@@ -621,9 +640,14 @@ function Main() {
 
       {/* Development  */}
       <section className="development">
-        <h3 className="development_title">От земли до продажи<br></br>недвижимости: </h3>
-        <p className="development_suptext">полный девелопмент-цикл в одной управляющей команде</p>
-        <p className="development_subtext">Ведём девелоперские проекты как управляемый процесс - от анализа участка до продажи<br></br>и выхода инвестора. Каждый этап заранее выстроен, контролируется и прозрачен для партнёров</p>
+        <h3 className="development_title">{t("development.title").split("\n").map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}</h3>
+        <p className="development_suptext">{t("development.suptext")}</p>
+        <p className="development_subtext">{t("development.subtext")}</p>
 
         {/* Accordion + Image */}
         <div className="development__wrapper">

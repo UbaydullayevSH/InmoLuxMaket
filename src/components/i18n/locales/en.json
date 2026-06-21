@@ -108,12 +108,29 @@
         },
         "howToGet": "HOW TO GET TO US",
         "askButton": "ASK A QUESTION",
+        "chatTitle": "Need help?",
+        "chatText": "Contact us in chat to get advice on selling or investing",
+        "chatButton": "OPEN CHAT",
         "mapLabel": "Abenio Ricardo Soriano, 55",
         "paymentLabel": "We accept payment",
         "copyright": "© 2019–2025 InmoLux",
         "privacy": "Privacy Policy",
         "cookiePolicy": "Cookie Policy"
     },
+    "investmentHero": {
+        "title": "Development projects in Marbella\nfor investors 10–30+ mln",
+        "text": "from plot and permits to sale and investor exit",
+        "button": "Get the management project presentation"
+    },
+    "investmentCard": {
+        "title_1": "ROI 35–40%",
+        "text_1": "Without leverage",
+        "title_2": "2–3 years",
+        "text_2": "Without leverage",
+        "title_3": "200+ mln €",
+        "text_3": "Without leverage"
+    }
+    ,
     "project": {
         "title": "Completed and ongoing\nprojects in Marbella",
         "description_1": "Paraiso-Alto — a well-developed area,\nknown for its natural beauty,\nsecurity and high quality of life. In\na few minutes drive from the lively nightlife\nof Puerto Banus, private schools and supermarkets.",
@@ -161,7 +178,36 @@
     }
 
     ,
-        "mobile": {
+        "privateInvestment": {
+        "title": "For private investors, family offices and developers",
+        "request": {
+            "title": "Request",
+            "text": "There is capital and interest in development\nin Marbella, but no desire\nto dive into permits,\ncontractors and project management"
+        },
+        "result": {
+            "title": "INMOLUX result",
+            "text": "A structured turnkey development\nproject ROI 35–40% without leverage,\n2–3 year cycle with clear economics\nand exit scenario"
+        },
+        "imageAlt": "Private investment project"
+    },
+    "development": {
+        "title": "Development projects in Marbella\nfor investors 10–30+ mln",
+        "suptext": "from plot and permits to sale and investor exit",
+        "subtext": "We work at every stage — from idea to implementation and investor exit",
+        "q_1": "Plot and investment potential analysis",
+        "a_1": "We assess location, zoning, restrictions and development potential. Rapid elimination of weak plots and understanding of real potential.",
+        "q_2": "Architectural concept",
+        "a_2": "We develop the concept, layout solutions and visualizations that align with project economics.",
+        "q_3": "Permits and approvals",
+        "a_3": "We coordinate document preparation and approvals with authorities and contractors.",
+        "q_4": "Turnkey private home construction",
+        "a_4": "We manage contractors, schedules and construction quality.",
+        "q_5": "Marketing, sales and exit",
+        "a_5": "We prepare a marketing strategy, sales and exit planning scenarios for investors.",
+        "q_6": "Financial model and capital structure",
+        "a_6": "We structure capital, prepare transparent economics and return scenarios."
+    },
+    "mobile": {
         "item1_title": "Search and selection",
         "item1_text": "Search of plots and projects. Location and market analysis. Preliminary demand assessment and investment potential evaluation.",
         "item2_title": "Due diligence",
