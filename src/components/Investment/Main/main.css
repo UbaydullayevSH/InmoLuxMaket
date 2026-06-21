@@ -604,15 +604,17 @@
     flex-direction: column;
     align-items: center;
     gap: 28px;
+       margin: 20px;
     margin-top: 24px;
 }
 
 .development_menu{
     list-style: none;
     padding: 0;
-    margin: 10px;
+  
     width: 100%;
     max-width: 720px;
+
 
 }
 
@@ -711,6 +713,7 @@
     .development_menu{
         padding: 0 16px;
         max-width: 100%;
+     
     }
 
     .development_item{
