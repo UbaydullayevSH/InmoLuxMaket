@@ -22,6 +22,10 @@ import MobileSwiper_3 from "../../../assets/png/mobile_swiper_3.png";
 
 // Private Image 
 import PrivateImage from "../../../assets/png/private_image.png";
+
+
+// Development Image 
+import DevelopmentImage from "../../../assets/png/development_img.png";
 function Main() {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -217,7 +221,7 @@ function Main() {
       image: MobileSwiper_1,
       title: t("mobile.item1_title") || "Поиск и отбор",
       text:
-      t("mobile.item1_text").split("\n").map((line, index) => (
+        t("mobile.item1_text").split("\n").map((line, index) => (
           <React.Fragment key={index}>
             {line}
             <br />
@@ -261,6 +265,46 @@ function Main() {
       copy[index] = !copy[index];
       return copy;
     });
+  };
+
+  // Development accordion data
+  const devItems = [
+    {
+      id: 1,
+      q: 'Анализ участка и инвест. потенциала',
+      a: 'Оцениваем локацию, зонирование, ограничения и потенциал застройки. Быстрый отсеев слабых участков и понимание реального потенциала.'
+    },
+    {
+      id: 2,
+      q: 'Архитектурная концепция',
+      a: 'Разрабатываем концепцию, планировочные решения и визуализации, которые согласуются с экономикой проекта.'
+    },
+    {
+      id: 3,
+      q: 'Лицензии и согласования',
+      a: 'Координируем подготовку документов и согласований с властями и подрядчиками.'
+    },
+    {
+      id: 4,
+      q: 'Строительство частных домов под ключ',
+      a: 'Управляем подрядчиками, графиками и качеством строительства.'
+    },
+    {
+      id: 5,
+      q: 'Маркетинг, продажи и выход',
+      a: 'Готовим маркетинговую стратегию, продажи и планируем сценарии выхода для инвесторов.'
+    },
+    {
+      id: 6,
+      q: 'Финансовая модель и структура капитала',
+      a: 'Структурируем капитал, готовим прозрачную экономику и сценарии доходности.'
+    }
+  ];
+
+  const [openDev, setOpenDev] = useState([]); // store ids of opened items
+
+  const toggleDev = (id) => {
+    setOpenDev((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
   };
 
   // Динамически менять количество карточек при изменении размера окна
@@ -572,6 +616,37 @@ function Main() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Development  */}
+      <section className="development">
+        <h3 className="development_title">От земли до продажи<br></br>недвижимости: </h3>
+        <p className="development_suptext">полный девелопмент-цикл в одной управляющей команде</p>
+        <p className="development_subtext">Ведём девелоперские проекты как управляемый процесс - от анализа участка до продажи<br></br>и выхода инвестора. Каждый этап заранее выстроен, контролируется и прозрачен для партнёров</p>
+
+        {/* Accordion + Image */}
+        <div className="development__wrapper">
+          <img src={DevelopmentImage} alt="Development Process" className="development_image" />
+
+          <ul className="development_menu">
+            {devItems.map((item) => (
+              <li key={item.id} className={`development_item ${openDev.includes(item.id) ? 'open' : ''}`}>
+                <button
+                  type="button"
+                  className="development_button"
+                  onClick={() => toggleDev(item.id)}
+                  aria-expanded={openDev.includes(item.id)}
+                >
+                  <span className="development_button_text">{item.q}</span>
+                  <span className={`development_icon ${openDev.includes(item.id) ? 'open' : ''}`}></span>
+                </button>
+                <div className="development_answer" style={{ maxHeight: openDev.includes(item.id) ? '120px' : '0px' }}>
+                  <p>{item.a}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </main>
