@@ -26,8 +26,20 @@ import PrivateImage from "../../../assets/png/private_image.png";
 
 // Development Image 
 import DevelopmentImage from "../../../assets/png/development_img.png";
+import ServiceImage1 from "../../../assets/png/service_img_1.png";
+import ServiceImage2 from "../../../assets/png/service_img_2.png";
+import ServiceImage3 from "../../../assets/png/service_img_3.png";
+// Niche images for new section
+import Niche1 from "../../../assets/png/niche_1.png";
+import Niche2 from "../../../assets/png/niche_2.png";
+import Niche3 from "../../../assets/png/niche_3.png";
+import Niche4 from "../../../assets/png/niche_4.png";
+
 function Main() {
   const { t } = useTranslation();
+  const riskLegalItems = t("risk.legal.items", { returnObjects: true });
+  const riskMitigateItems = t("risk.mitigate.items", { returnObjects: true });
+  const riskOperationalItems = t("risk.operational.items", { returnObjects: true });
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
   const [currentProjectIndex1, setCurrentProjectIndex1] = useState(0);
@@ -377,6 +389,49 @@ function Main() {
   const progressPercentage1 = ((currentProjectIndex1 + 1) / projectsData.length) * 100;
   const progressPercentage2 = ((currentProjectIndex2 + 1) / projectsData.length) * 100;
 
+  const [servicesOpen, setServicesOpen] = useState([true, true, true]);
+
+  const servicesCards = [
+    {
+      title: t("services.title_1"),
+      image: ServiceImage1,
+      items: [
+        t("services.card_1.item_1"),
+        t("services.card_1.item_2"),
+        t("services.card_1.item_3"),
+        t("services.card_1.item_4"),
+      ],
+    },
+    {
+      title: t("services.title_2"),
+      image: ServiceImage2,
+      items: [
+        t("services.card_2.item_1"),
+        t("services.card_2.item_2"),
+        t("services.card_2.item_3"),
+        t("services.card_2.item_4"),
+      ],
+    },
+    {
+      title: t("services.title_3"),
+      image: ServiceImage3,
+      items: [
+        t("services.card_3.item_1"),
+        t("services.card_3.item_2"),
+        t("services.card_3.item_3"),
+        t("services.card_3.item_4"),
+      ],
+    },
+  ];
+
+  const toggleServiceCard = (index) => {
+    setServicesOpen((prev) => {
+      const next = [...prev];
+      next[index] = !next[index];
+      return next;
+    });
+  };
+
   return (
     <main className="main">
       {/* Hero  */}
@@ -639,6 +694,7 @@ function Main() {
       </section>
 
       {/* Development  */}
+
       <section className="development">
         <h3 className="development_title">{t("development.title").split("\n").map((line, index) => (
           <React.Fragment key={index}>
@@ -647,7 +703,12 @@ function Main() {
           </React.Fragment>
         ))}</h3>
         <p className="development_suptext">{t("development.suptext")}</p>
-        <p className="development_subtext">{t("development.subtext")}</p>
+        <p className="development_subtext">{t("development.subtext").split("\n").map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}</p>
 
         {/* Accordion + Image */}
         <div className="development__wrapper">
@@ -673,6 +734,121 @@ function Main() {
           </ul>
         </div>
       </section>
+
+      {/* Services  */}
+      <section className="services">
+        <h3 className="services_title">{t("services.title").split("\n").map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}</h3>
+        <p className="services_suptext">{t("services.suptext").split("\n").map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}</p>
+        <div className="services__wrapper">
+          {servicesCards.map((card, index) => (
+            <div className="services_card" key={index}>
+              <p className="services_card_title">
+                {card.title.split("\n").map((line, itemIndex) => (
+                  <React.Fragment key={itemIndex}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </p>
+              <div
+                className="services_img__block"
+                style={{ backgroundImage: `url(${card.image})` }}
+              >
+                <button
+                  type="button"
+                  className="services_toggle_btn"
+                  onClick={() => toggleServiceCard(index)}
+                  aria-expanded={servicesOpen[index]}
+                  aria-label={servicesOpen[index] ? 'Hide answers' : 'Show answers'}
+                >
+                  <i className={`fa-solid ${servicesOpen[index] ? 'fa-xmark' : 'fa-plus'} service_icon`} />
+                </button>
+              </div>
+
+              {servicesOpen[index] && (
+                <ul className="services_menu">
+                  {card.items.map((item, itemIndex) => (
+                    <li className="services_menu_item" key={itemIndex}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+            {/* Risk / Niche Section (new) */}
+      <section className="risk-section">
+        <h2 className="risk-section__title">{t("risk.title")}
+          <span className="risk-section__subtitle">{t("risk.subtitle")}</span>
+        </h2>
+
+        <div className="risk-section__grid">
+          {/* Top row: text + mountains image */}
+          <div className="risk-row risk-row--top">
+            <div className="risk-col risk-col--text">
+              <h4>{t("risk.legal.title")}</h4>
+              <ul>
+                {(Array.isArray(riskLegalItems) ? riskLegalItems : []).map((it, i) => (
+                  <li key={i}>{it}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="risk-col risk-col--image">
+              <img src={Niche1} alt={t("risk.images.mountainsAlt")} className="risk-image" />
+            </div>
+          </div>
+
+          {/* Middle row: two small images + text box */}
+          <div className="risk-row risk-row--middle">
+            <div className="risk-col risk-col--image small">
+              <img src={Niche2} alt="Small house 1" className="risk-thumb" />
+            </div>
+            <div className="risk-col risk-col--image small">
+              <img src={Niche3} alt="Small house 2" className="risk-thumb" />
+            </div>
+            <div className="risk-col risk-col--text">
+              <div className="risk-box">
+                <h5>{t("risk.mitigate.title")}</h5>
+                <ul>
+                  {(Array.isArray(riskMitigateItems) ? riskMitigateItems : []).map((it, i) => (
+                    <li key={i}>{it}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom row: text + big penthouse image */}
+          <div className="risk-row risk-row--bottom">
+            <div className="risk-col risk-col--text">
+              <h4>{t("risk.operational.title")}</h4>
+              <ul>
+                {(Array.isArray(riskOperationalItems) ? riskOperationalItems : []).map((it, i) => (
+                  <li key={i}>{it}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="risk-col risk-col--image">
+              <img src={Niche4} alt={t("risk.images.penthouseAlt")} className="risk-image" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </main>
   );
 }

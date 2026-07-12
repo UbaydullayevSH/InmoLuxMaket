@@ -191,9 +191,9 @@
         "imageAlt": "Private investment project"
     },
     "development": {
-        "title": "Development projects in Marbella\nfor investors 10–30+ mln",
-        "suptext": "from plot and permits to sale and investor exit",
-        "subtext": "We work at every stage — from idea to implementation and investor exit",
+        "title": "From land to property sale: ",
+        "suptext": "full development cycle under one management team",
+        "subtext": "We manage development projects as a controlled process - from plot analysis to investor exit.\nEach stage is pre-planned, monitored, and transparent for partners.",
         "q_1": "Plot and investment potential analysis",
         "a_1": "We assess location, zoning, restrictions and development potential. Rapid elimination of weak plots and understanding of real potential.",
         "q_2": "Architectural concept",
@@ -207,6 +207,43 @@
         "q_6": "Financial model and capital structure",
         "a_6": "We structure capital, prepare transparent economics and return scenarios."
     },
+    "risk": {
+        "title": "SECURE INVESTMENTS",
+        "subtitle": "INTERNATIONAL REAL ESTATE",
+        "legal": {
+            "title": "Legal risks",
+            "items": [
+                "Losses and freezes",
+                "Licenses and permits",
+                "Contractor non-performance",
+                "Development restrictions",
+                "Regional specifics"
+            ]
+        },
+        "mitigate": {
+            "title": "How we mitigate risk",
+            "items": [
+                "We build a financial model with reserves",
+                "We budget independent estimates",
+                "We use independent valuations and budget control",
+                "We regularly update financial indicators during the project"
+            ]
+        },
+        "operational": {
+            "title": "Operational risks",
+            "items": [
+                "Contractor schedule delays",
+                "Quality control issues during construction",
+                "Liability risks between project participants"
+            ]
+        },
+        "images": {
+            "mountainsAlt": "Mountains and coast",
+            "house1Alt": "House 1",
+            "house2Alt": "House 2",
+            "penthouseAlt": "Penthouse"
+        }
+    },
     "mobile": {
         "item1_title": "Search and selection",
         "item1_text": "Search of plots and projects. Location and market analysis. Preliminary demand assessment and investment potential evaluation.",
@@ -214,7 +251,33 @@
         "item2_text": "Land and project due diligence, permits, risks and economic model.",
         "item3_title": "Management",
         "item3_text": "Project management, contractors, timeline and budget control."
-    }
-}
+    },
+        "services": {
+        "title": "Services for investors\nand development projects",
+            "suptext": "We accompany profitable investments in real estate in Marbella and on Costa del Sol\nat all key stages - from analysis to exit",
+            "title_1":"Search and selection\nof investment projects",
+            "title_2":"Due diligence\nand risk assessment",
+            "title_3":"Financial model\nand capital structure",
+            "card_1": {
+                "item_1":"Search of plots and projects",
+                "item_2":"Location and market analysis",
+                "item_3":"Preliminary demand assessment",
+                "item_4":"Investment potential evaluation"
+            },
+            "card_2": {
+                "item_1":"Risk assessment\nand mitigation",
+                "item_2":"Legal and permit checks",
+                "item_3":"Project viability review",
+                "item_4":"Contractor and budget control"
+            },
+            "card_3": {
+                "item_1":"Modeling project cash flows",
+                "item_2":"Equity and debt structure",
+                "item_3":"Return forecast and timing",
+                "item_4":"Funding and exit strategy"
+            }
+        }}
+   
+
 
 

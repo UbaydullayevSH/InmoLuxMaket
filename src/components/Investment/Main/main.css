@@ -495,8 +495,8 @@
         align-items: center;
         justify-content: center;
     }
-    
-    .private_invest_bg{
+
+    .private_invest_bg {
         background: url("../../../assets/png/mobile_swiper_1.png") no-repeat center / cover;
     }
 
@@ -545,14 +545,14 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.95);
-    border: 1px solid rgba(0,0,0,0.08);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 4;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .mobile-toggle-btn i {
@@ -579,53 +579,54 @@
     text-align: center;
 }
 
-.development_title{
+.development_title {
     font-weight: lighter;
     font-size: 2rem;
 }
 
-.development_suptext{
+.development_suptext {
     color: gray;
 }
 
-.development_subtext{
+.development_subtext {
     color: gray;
+    font-size: 0.75rem;
 }
 
-.development_image{
+.development_image {
     width: 100%;
     max-width: 750px;
     display: block;
     margin: 0 auto;
 }
 
-.development__wrapper{
+.development__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 28px;
-       margin: 20px;
+    margin: 20px;
     margin-top: 24px;
 }
 
-.development_menu{
+.development_menu {
     list-style: none;
     padding: 0;
-  
+
     width: 100%;
     max-width: 720px;
 
 
 }
 
-.development_item{
+.development_item {
     width: 100%;
     border-bottom: 1px solid #e4e4e4;
     padding: 16px 0;
-  
+
 }
 
-.development_button{
+.development_button {
     width: 100%;
     background: none;
     border: none;
@@ -638,23 +639,23 @@
     gap: 16px;
 }
 
-.development_button_text{
+.development_button_text {
     color: #222;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.4;
 }
 
-.development_icon{
+.development_icon {
     width: 18px;
     height: 18px;
     position: relative;
     display: inline-block;
-        border-radius: 20px;
+    border-radius: 20px;
 }
 
 .development_icon::before,
-.development_icon::after{
+.development_icon::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -664,40 +665,40 @@
     transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
-.development_icon::before{
+.development_icon::before {
     width: 100%;
     height: 2px;
     transform: translate(-50%, -50%) rotate(0deg);
 }
 
-.development_icon::after{
+.development_icon::after {
     width: 2px;
     height: 100%;
     transform: translate(-40%, -50%) rotate(0deg);
 }
 
-.development_icon.open::before{
+.development_icon.open::before {
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.development_icon.open::after{
+.development_icon.open::after {
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
 
 
-.development_answer{
+.development_answer {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
-.development_item.open .development_answer{
+.development_item.open .development_answer {
     opacity: 1;
 }
 
-.development_answer p{
+.development_answer p {
     margin: 10px 0 0;
     color: #666;
     font-size: 0.95rem;
@@ -705,69 +706,276 @@
 }
 
 @media (max-width: 768px) {
-    .development__wrapper{
+    .development__wrapper {
         gap: 20px;
 
     }
 
-    .development_menu{
+    .development_menu {
         padding: 0 16px;
         max-width: 100%;
-     
+
     }
 
-    .development_item{
+    .development_item {
         padding: 14px 0;
     }
 
-    .development_button_text{
+    .development_button_text {
         font-size: 0.95rem;
     }
 }
 
 @media (max-width: 1024px) {
-    .development_image{
+    .development_image {
         max-width: 640px;
     }
 
-    .development_button{
+    .development_button {
         gap: 12px;
     }
 }
 
 @media (max-width: 520px) {
-    .development_title{
+    .development_title {
         font-size: 1.5rem;
     }
 
     .development_subtext,
-    .development_suptext{
+    .development_suptext {
         font-size: 0.95rem;
         line-height: 1.5;
     }
 
-    .development__wrapper{
+    .development__wrapper {
         gap: 16px;
     }
 
-    .development_menu{
+    .development_menu {
         padding: 0 12px;
     }
 
-    .development_item{
+    .development_item {
         padding: 12px 0;
     }
 
-    .development_button{
+    .development_button {
         gap: 10px;
     }
 
-    .development_icon{
+    .development_icon {
         width: 16px;
         height: 16px;
     }
 
-    .development_button_text{
+    .development_button_text {
         font-size: 0.95rem;
+    }
+}
+
+/* Services  */
+
+.services_title {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.services_suptext {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.services__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.services_img__block {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    height: 300px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.services_card {
+    border: 1px solid gainsboro;
+    padding: 20px;
+}
+
+.services_toggle_btn {
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.service_icon {
+    background: transparent;
+    border-radius: 50%;
+    font-size: 1rem;
+    color: #1a1a1a;
+}
+
+.services_menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    margin-top: 25px;
+}
+
+.services_menu_item {
+    font-weight: 300;
+
+}
+
+/* Risk / Niche Section */
+.risk-section {
+    max-width: 1200px;
+    margin: 36px auto; /* reduced outer margin */
+    padding: 0 12px 20px; /* reduced horizontal and bottom padding */
+}
+
+.risk-section__title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.risk-section__title .risk-section__subtitle {
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 8px;
+}
+
+
+.risk-section__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* slightly smaller spacing between rows */
+}
+
+.risk-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px; /* slightly smaller gap between columns */
+    align-items: stretch;
+}
+
+.risk-row--middle {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.risk-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    margin: 0; /* reset, outer spacing handled by gaps */
+}
+
+.risk-col--text {
+    border: 1px solid #e6e6e6;
+    padding: 12px; /* slightly smaller inner padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.risk-col--text h4,
+.risk-col--text h5 {
+    margin: 0 0 8px 0;
+    font-weight: 500;
+}
+
+.risk-col--text ul {
+    margin: 0;
+    padding: 0;
+    color: #555;
+    list-style-position: inside;
+    max-width: 360px; /* limit text width for better visual */
+    text-align: left;
+}
+
+.risk-col--text ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.risk-col--image .risk-image,
+.risk-col--image .risk-thumb {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #e6e6e6;
+}
+
+.risk-col--image.small .risk-thumb {
+    height: 320px; /* increased middle images height */
+}
+
+.risk-image {
+    height: 380px; /* slight increase for main images */
+}
+
+.risk-box {
+    padding: 12px;
+    background: #fff;
+}
+
+
+@media (max-width: 1024px) {
+    .risk-row,
+    .risk-row--middle {
+        grid-template-columns: 1fr;
+    }
+
+    .risk-image {
+        height: 260px;
+    }
+
+    .risk-col--image.small .risk-thumb {
+        height: 220px;
+    }
+
+    .risk-col--text {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .risk-section__title {
+        font-size: 1.4rem;
+    }
+
+    .risk-image {
+        height: 180px;
+    }
+
+    .risk-col--image.small .risk-thumb {
+        height: 140px;
+    }
+
+    .risk-col--text {
+        min-height: 140px;
     }
 }
