@@ -774,7 +774,6 @@
 }
 
 /* Services  */
-
 .services_title {
     text-align: center;
     font-weight: lighter;
@@ -810,6 +809,7 @@
 .services_card {
     border: 1px solid gainsboro;
     padding: 20px;
+    margin: 30px;
 }
 
 .services_toggle_btn {
@@ -843,9 +843,24 @@
 
 }
 
+@media(max-width:324px){
+    .services_card{
+        width: 275px;
+    }
+
+    .services_card_title{
+        text-align: center;
+    }
+
+    .services_menu{
+        padding: 35px;
+    }
+}
+
+
 /* Risk / Niche Section */
 .risk-section {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 36px auto; /* reduced outer margin */
     padding: 0 12px 20px; /* reduced horizontal and bottom padding */
 }
