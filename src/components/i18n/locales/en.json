@@ -131,6 +131,8 @@
         "text_3": "Without leverage"
     }
     ,
+
+    
     "project": {
         "title": "Completed and ongoing\nprojects in Marbella",
         "description_1": "Paraiso-Alto — a well-developed area,\nknown for its natural beauty,\nsecurity and high quality of life. In\na few minutes drive from the lively nightlife\nof Puerto Banus, private schools and supermarkets.",
@@ -276,7 +278,21 @@
                 "item_3":"Return forecast and timing",
                 "item_4":"Funding and exit strategy"
             }
-        }}
+        },
+      "system": {
+        "title": "InmoLux is the scale,\nrecognition and systematic work in the Spanish market",
+        "text_1": "Objects in our own\n and partner databases",
+        "text_2": "Objects in our own\n and partner databases",
+        "text_3": "Languages of the team\nEN / ES / FR / IT / DE / LV / UA / RU",
+        "text_4": "Clients\n80% deals - by personal recommendations",
+        "text_5": "Professional recognition\nat the national level",
+        "text_6": "Regional award for contribution \nto development and quality of projects",
+        "text_7": "Professional recognition \nat the national level",
+        "suptitle_1": "Membership in LPA",
+        "suptitle_2": "Andalucia Excelente ",
+        "suptitle_3": "Eu Property Awards "
+    }}
+      
    
 
 

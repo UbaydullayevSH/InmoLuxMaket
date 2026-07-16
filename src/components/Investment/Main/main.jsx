@@ -24,6 +24,11 @@ import MobileSwiper_3 from "../../../assets/png/mobile_swiper_3.png";
 import PrivateImage from "../../../assets/png/private_image.png";
 
 
+// System Images 
+import System_1 from "../../../assets/png/system_1.png";
+import System_2 from "../../../assets/png/system_2.png";
+
+
 // Development Image 
 import DevelopmentImage from "../../../assets/png/development_img.png";
 import ServiceImage1 from "../../../assets/png/service_img_1.png";
@@ -434,57 +439,32 @@ function Main() {
 
   return (
     <main className="main">
-      {/* Hero  */}
+      {/* Hero with carousel */}
       <section className="investment-hero">
-        <div className="investment-hero__top">
-          <h1 className="investment-hero_title">{t("investmentHero.title").split("\n").map((line, index) => (
-            <React.Fragment key={index}>
-              {line}
-              <br />
-            </React.Fragment>
-          ))}</h1>
-          <p className="investment-hero_text">{t("investmentHero.text")}</p>
-          <button className="investment-hero_btn">{t("investmentHero.button")}</button>
-        </div>
-
-        {/* Carousel */}
-        <div className="carousel-section">
-          <div className="carousel-container">
-            <div className="carousel-wrapper">
-              <div className="carousel-track">
-                {visibleImages.map((image, index) => (
-                  <div key={index} className="carousel-item">
-                    <img
-                      src={image}
-                      alt={`Slide ${currentIndex + index + 1}`}
-                      className="carousel-image"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="investment-hero__inner">
+          <div className="investment-hero__content">
+            <h1 className="investment-hero_title">{t("investmentHero.title").split("\n").map((line, index) => (
+              <React.Fragment key={index}>{line}<br/></React.Fragment>
+            ))}</h1>
+            <p className="investment-hero_text">{t("investmentHero.text")}</p>
+            <button className="investment-hero_btn">{t("investmentHero.button")}</button>
           </div>
 
-          {/* Navigation Buttons */}
-          <div className="carousel-nav">
-            <button
-              className="carousel-btn carousel-btn--prev"
-              onClick={prevSlide}
-              aria-label="Previous slide"
-            >
-              ←
+          <div className="investment-hero__carousel">
+            <button className="carousel-nav carousel-nav--left" onClick={prevSlide} aria-label="Previous">
+              <i className="fa-solid fa-chevron-left"></i>
             </button>
-            <button
-              className="carousel-btn carousel-btn--next"
-              onClick={nextSlide}
-              aria-label="Next slide"
-            >
-              →
+
+            <div className="carousel-hero__viewport">
+              <img src={images[currentIndex]} alt={`slide-${currentIndex}`} className="carousel-hero__image" />
+            </div>
+
+            <button className="carousel-nav carousel-nav--right" onClick={nextSlide} aria-label="Next">
+              <i className="fa-solid fa-chevron-right"></i>
             </button>
           </div>
         </div>
       </section>
-
       {/* Card  */}
       <section className="card">
         <div className="card__wrapper">
@@ -789,7 +769,7 @@ function Main() {
         </div>
       </section>
 
-            {/* Risk / Niche Section (new) */}
+      {/* Risk / Niche Section (new) */}
       <section className="risk-section">
         <h2 className="risk-section__title">{t("risk.title")}
           <span className="risk-section__subtitle">{t("risk.subtitle")}</span>
@@ -844,6 +824,100 @@ function Main() {
             <div className="risk-col risk-col--image">
               <img src={Niche4} alt={t("risk.images.penthouseAlt")} className="risk-image" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* System  */}
+      <section className="system">
+        <h3 className="system_title">{t("system.title").split("\n").map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}</h3>
+        <div className="system__wrapper">
+
+          <div className="system_card">
+            <img src={System_1} alt="System Image 1" />
+
+            {/* SYSTEM CARD BOX  */}
+            <div className="system_card_box">
+              <h3 className="card_box_suptitle">30 000+</h3>
+              <p className="card_box_text">{t("system.text_1").split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}</p>
+            </div>
+
+            <div className="system_card_box">
+              <h3 className="card_box_suptitle">15+</h3>
+              <p className="card_box_text">{t("system.text_2").split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}</p>
+            </div>
+
+            <div className="system_card_box">
+              <h3 className="card_box_suptitle">8+</h3>
+              <p className="card_box_text">{t("system.text_3").split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}</p>
+            </div>
+
+            <div className="system_card_box">
+              <h3 className="card_box_suptitle">5000+</h3>
+              <p className="card_box_text">{t("system.text_4").split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}</p>
+            </div>
+
+            <img src={System_2} alt="System Image 2" />
+            {/* /SYSTEM CARD BOX  */}
+
+            {/* SYSTEM CARD BLOCK  */}
+            <div className="system_card_block">
+              <h3 className="system_card_block_suptitle">{t("system.suptitle_1")}</h3>
+              <p className="system_card_block_text">{t("system.text_5").split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}</p>
+            </div>
+
+            <div className="system_card_block">
+              <h3 className="system_card_block_suptitle">{t("system.suptitle_2")}</h3>
+              <p className="system_card_block_text">{t("system.text_6").split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}</p>
+            </div>
+
+            <div className="system_card_block">
+              <h3 className="system_card_block_suptitle">{t("system.suptitle_3")}</h3>
+              <p className="system_card_block_text">{t("system.text_7").split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}</p>
+            </div>
+
+            {/* /SYSTEM CARD BLOCK  */}
+
           </div>
         </div>
       </section>
