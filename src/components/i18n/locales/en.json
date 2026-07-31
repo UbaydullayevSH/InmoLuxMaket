@@ -279,6 +279,26 @@
                 "item_4":"Funding and exit strategy"
             }
         },
+        "faq": {
+        "title": "Frequently asked questions",
+        "subtitle": "Click the cross to expand the answer",
+        "q_1": "What is the minimum investment amount to join the project?",
+        "a_1": "The minimum entry usually starts from €1 million and depends on the deal structure and the investor's level of participation.",
+        "q_2": "In what format does an investor participate in the project?",
+        "a_2": "An investor can join either as a single-project participant or through a pooled structure with direct involvement or a special vehicle.",
+        "q_3": "How is the project financing structured?",
+        "a_3": "Financing is built around a transparent model with risk allocation, budget control, and a clear capital structure.",
+        "q_4": "What are the typical timelines of the investment cycle?",
+        "a_4": "The cycle usually lasts 2–3 years, including site selection, approvals, construction, and exit execution.",
+        "q_5": "How does the investor receive reporting on the project?",
+        "a_5": "We provide regular reports on the budget, implementation status, legal matters, and financial performance.",
+        "q_6": "How do you ensure sales and liquidity at exit?",
+        "a_6": "We build the marketing plan, engage qualified buyers, and use our partner network to support a fast and efficient exit.",
+        "q_7": "How is investor confidentiality protected?",
+        "a_7": "All participant and transaction information is handled confidentially and shared only with the authorized circle.",
+        "q_8": "Do you have repeat investments from existing partners?",
+        "a_8": "Yes, we regularly work with returning investors and maintain long-term partnerships built on trust and execution quality."
+    },
       "system": {
         "title": "InmoLux is the scale,\nrecognition and systematic work in the Spanish market",
         "text_1": "Objects in our own\n and partner databases",

@@ -395,6 +395,7 @@ function Main() {
   const progressPercentage2 = ((currentProjectIndex2 + 1) / projectsData.length) * 100;
 
   const [servicesOpen, setServicesOpen] = useState([true, true, true]);
+  const [openFaq, setOpenFaq] = useState(null);
 
   const servicesCards = [
     {
@@ -437,6 +438,21 @@ function Main() {
     });
   };
 
+  const faqItems = [
+    { id: 1, question: t("faq.q_1"), answer: t("faq.a_1") },
+    { id: 2, question: t("faq.q_2"), answer: t("faq.a_2") },
+    { id: 3, question: t("faq.q_3"), answer: t("faq.a_3") },
+    { id: 4, question: t("faq.q_4"), answer: t("faq.a_4") },
+    { id: 5, question: t("faq.q_5"), answer: t("faq.a_5") },
+    { id: 6, question: t("faq.q_6"), answer: t("faq.a_6") },
+    { id: 7, question: t("faq.q_7"), answer: t("faq.a_7") },
+    { id: 8, question: t("faq.q_8"), answer: t("faq.a_8") }
+  ];
+
+  const toggleFaq = (id) => {
+    setOpenFaq((prev) => (prev === id ? null : id));
+  };
+
   return (
     <main className="main">
       {/* Hero with carousel */}
@@ -444,7 +460,7 @@ function Main() {
         <div className="investment-hero__inner">
           <div className="investment-hero__content">
             <h1 className="investment-hero_title">{t("investmentHero.title").split("\n").map((line, index) => (
-              <React.Fragment key={index}>{line}<br/></React.Fragment>
+              <React.Fragment key={index}>{line}<br /></React.Fragment>
             ))}</h1>
             <p className="investment-hero_text">{t("investmentHero.text")}</p>
             <button className="investment-hero_btn">{t("investmentHero.button")}</button>
@@ -919,6 +935,39 @@ function Main() {
             {/* /SYSTEM CARD BLOCK  */}
 
           </div>
+        </div>
+      </section>
+
+      {/* Questions  */}
+      <section className="faq">
+        <div className="faq__header">
+          <h3 className="faq_title">{t("faq.title")}</h3>
+          <p className="faq_subtitle">{t("faq.subtitle")}</p>
+        </div>
+
+        <div className="faq_menu">
+          {faqItems.map((item) => {
+            const isOpen = openFaq === item.id;
+
+            return (
+              <article className={`faq_item ${isOpen ? "open" : ""}`} key={item.id}>
+                <button
+                  type="button"
+                  className="faq_button"
+                  onClick={() => toggleFaq(item.id)}
+                  aria-expanded={isOpen}
+                >
+                  <span className="faq_question">{item.question}</span>
+                  <span className={`faq_icon ${isOpen ? "open" : ""}`} aria-hidden="true">
+                    <i className={`fa-solid ${isOpen ? "fa-xmark" : "fa-plus"}`}></i>
+                  </span>
+                </button>
+                <div className={`faq_answer ${isOpen ? "open" : ""}`}>
+                  <p>{item.answer}</p>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
 

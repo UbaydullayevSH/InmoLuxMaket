@@ -54,7 +54,7 @@
 }
 
 .carousel-nav {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid #ddd;
     width: 44px;
     height: 44px;
@@ -150,13 +150,18 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: rgba(255,255,255,0.85);
+        background: rgba(255, 255, 255, 0.85);
         z-index: 5;
         display: flex;
     }
 
-    .carousel-nav--left { left: 8px; }
-    .carousel-nav--right { right: 8px; }
+    .carousel-nav--left {
+        left: 8px;
+    }
+
+    .carousel-nav--right {
+        right: 8px;
+    }
 
     .carousel-hero__image {
         height: 200px;
@@ -1004,7 +1009,7 @@
 .risk-section__title {
     text-align: center;
     font-size: 2.2rem;
-    font-weight: 200;
+    font-weight: lighter;
     letter-spacing: 2px;
     margin-bottom: 24px;
     display: block;
@@ -1143,7 +1148,7 @@
 
 .system_title {
     text-align: center;
-font-weight: lighter;
+    font-weight: lighter;
 }
 
 .system__wrapper {
@@ -1152,7 +1157,7 @@ font-weight: lighter;
     padding: 40px 18px;
 }
 
-.system img{
+.system img {
     width: 350px;
 }
 
@@ -1171,7 +1176,7 @@ font-weight: lighter;
     overflow: hidden;
 }
 
-.system_card > * {
+.system_card>* {
     padding: 28px 30px;
     border-right: 1px solid #e9e9e9;
     border-bottom: 1px solid #e9e9e9;
@@ -1190,7 +1195,7 @@ font-weight: lighter;
 
 .system_card .system_card_box .card_box_suptitle,
 .system_card .system_card_block .system_card_block_suptitle {
-font-size: 1.7rem;
+    font-size: 1.7rem;
     font-weight: 200;
     margin: 0 0 12px 0;
     color: #000;
@@ -1205,7 +1210,7 @@ font-size: 1.7rem;
 }
 
 /* Place the second image (big visual) to span two columns and two rows */
-.system_card > :nth-child(1) {
+.system_card> :nth-child(1) {
     /* first image */
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -1213,31 +1218,31 @@ font-size: 1.7rem;
     height: auto;
 }
 
-.system_card > :nth-child(2) {
+.system_card> :nth-child(2) {
     /* first numbered box */
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
 
-.system_card > :nth-child(3) {
+.system_card> :nth-child(3) {
     /* second numbered box */
     grid-column: 3 / 4;
     grid-row: 1 / 2;
 }
 
-.system_card > :nth-child(4) {
+.system_card> :nth-child(4) {
     /* third numbered box */
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 }
 
-.system_card > :nth-child(5) {
+.system_card> :nth-child(5) {
     /* fourth numbered box */
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
 
-.system_card > :nth-child(6) {
+.system_card> :nth-child(6) {
     /* big image */
     grid-column: 3 / 4;
     /* occupy two rows to increase visual height so captions align */
@@ -1248,13 +1253,12 @@ font-size: 1.7rem;
     min-height: 360px;
 }
 
-.system_card > :nth-child(7) {
+.system_card> :nth-child(7) {
     /* bottom blocks: first */
     grid-column: 1 / 2;
     grid-row: 3 / 4;
 }
 
-.system_card > :nth-child(6) { }
 
 /* Adjust paddings for the numbered boxes to match the design */
 .system_card_box {
@@ -1270,13 +1274,15 @@ font-size: 1.7rem;
     justify-content: center;
 }
 
-.system_card_box, .system_card_block {
+.system_card_box,
+.system_card_block {
     transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
-.system_card_box:hover, .system_card_block:hover {
+.system_card_box:hover,
+.system_card_block:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 /* Responsive: stack into single column */
@@ -1288,7 +1294,7 @@ font-size: 1.7rem;
     }
 
     /* On smaller screens reset explicit placements so flow is natural */
-    .system_card > * {
+    .system_card>* {
         grid-column: auto !important;
         grid-row: auto !important;
         padding: 14px 12px;
@@ -1307,17 +1313,22 @@ font-size: 1.7rem;
 }
 
 @media (max-width: 520px) {
+
     .system_card .card_box_suptitle,
     .system_card .system_card_block_suptitle {
         font-size: 28px;
     }
-    .system__wrapper { padding: 20px 10px; }
+
+    .system__wrapper {
+        padding: 20px 10px;
+    }
 }
 
 @media (max-width: 360px) {
     .system_card img:nth-of-type(2) {
         height: 180px;
     }
+
     .system_card .card_box_suptitle,
     .system_card .system_card_block_suptitle {
         font-size: 24px;
@@ -1348,3 +1359,153 @@ font-size: 1.7rem;
     display: inline-block;
     font-variant-numeric: tabular-nums;
 }
+
+/* Faq  */
+
+.faq {
+    padding: 80px 20px 100px;
+    text-align: center;
+}
+
+.faq__header {
+    max-width: 760px;
+    margin: 0 auto 32px;
+}
+
+.faq_title {
+    font-weight: 300;
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    margin: 0 0 10px;
+    color: #111;
+}
+
+.faq_subtitle {
+    margin: 0;
+    font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+    line-height: 1.7;
+    color: #666;
+}
+
+.faq_menu {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq_item {
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.faq_button {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq_question {
+    font-size: clamp(0.95rem, 1.7vw, 1.05rem);
+    line-height: 1.55;
+    font-weight: 500;
+    color: #111;
+}
+
+.faq_icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #d7d7d7;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: all 0.25s ease;
+}
+
+.faq_icon i {
+    font-size: 0.85rem;
+    color: #111;
+    transition: transform 0.25s ease;
+}
+
+.faq_item.open .faq_icon {
+    background: #111;
+    border-color: #111;
+}
+
+.faq_item.open .faq_icon i {
+    color: #fff;
+    transform: rotate(45deg);
+}
+
+.faq_answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 20px;
+}
+
+.faq_answer.open {
+    max-height: 240px;
+    padding: 0 20px 18px;
+}
+
+.faq_answer p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .faq {
+        padding: 60px 15px 80px;
+    }
+
+    .faq_button {
+        padding: 16px;
+    }
+
+    .faq_question {
+        font-size: 0.95rem;
+    }
+
+    .faq_icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq_menu {
+        gap: 10px;
+    }
+
+    .faq_button {
+        align-items: flex-start;
+    }
+
+    .faq_question {
+        line-height: 1.5;
+    }
+
+    .faq_answer.open {
+        max-height: 320px;
+    }
+
+    .faq_answer p {
+        font-size: 0.9rem;
+    }
+}
+
