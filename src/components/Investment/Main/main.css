@@ -727,10 +727,12 @@
 .development_title {
     font-weight: lighter;
     font-size: 2rem;
+
 }
 
 .development_suptext {
     color: gray;
+    text-align: center;
 }
 
 .development_subtext {
@@ -955,6 +957,10 @@
     border: 1px solid gainsboro;
     padding: 20px;
     margin: 30px;
+}
+
+.services_card_title{
+    text-align: center;
 }
 
 .services_toggle_btn {
