@@ -971,6 +971,36 @@ function Main() {
         </div>
       </section>
 
+      <section className="form">
+        <div className="form__wrapper">
+          <div className="form__content">
+            <div className="form_text__box">
+              <h4 className="form_title">Обсудить инвестиционный<br />проект с основателем</h4>
+              <p className="form_text">
+                Разбор вашего инвестиционного потенциала и ориентировочного ROI<br />
+                от основателя InmoLux
+              </p>
+            </div>
+
+            <div className="form_field_group">
+              <ul className="form_menu">
+                <li className="form_item">Бюджет<i className="fa-solid fa-chevron-down form_icon"></i></li>
+                <li className="form_item">Сроки<i className="fa-solid fa-chevron-down form_icon"></i></li>
+                <li className="form_item">Цель<i className="fa-solid fa-chevron-down form_icon"></i></li>
+                <li className="form_item">Гражданство<i className="fa-solid fa-chevron-down form_icon"></i></li>
+              </ul>
+
+              <span className="form_span">Проекты от €5M / Конфиденциально</span>
+              <button className="form_btn" type="button">Запросить консультацию</button>
+              <span className="form_privacy">
+                Отправляя, вы соглашаетесь с политикой<br />
+                конфиденциальности и пользовательским соглашением
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
     </main>
   );
