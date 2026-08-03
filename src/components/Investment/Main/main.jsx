@@ -41,16 +41,96 @@ import Niche3 from "../../../assets/png/niche_3.png";
 import Niche4 from "../../../assets/png/niche_4.png";
 
 function Main() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const riskLegalItems = t("risk.legal.items", { returnObjects: true });
   const riskMitigateItems = t("risk.mitigate.items", { returnObjects: true });
   const riskOperationalItems = t("risk.operational.items", { returnObjects: true });
+  const formFieldConfig = {
+    budget: {
+      label: t("form.fields.budget.label"),
+      options: t("form.fields.budget.options", { returnObjects: true })
+    },
+    term: {
+      label: t("form.fields.term.label"),
+      options: t("form.fields.term.options", { returnObjects: true })
+    },
+    goal: {
+      label: t("form.fields.goal.label"),
+      options: t("form.fields.goal.options", { returnObjects: true })
+    },
+    citizenship: {
+      label: t("form.fields.citizenship.label"),
+      options: t("form.fields.citizenship.options", { returnObjects: true })
+    }
+  };
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
   const [currentProjectIndex1, setCurrentProjectIndex1] = useState(0);
   const [currentProjectIndex2, setCurrentProjectIndex2] = useState(0);
+  const [formFields, setFormFields] = useState(() => [
+    {
+      id: "budget",
+      label: formFieldConfig.budget.label,
+      selected: formFieldConfig.budget.label,
+      isOpen: false,
+      options: formFieldConfig.budget.options
+    },
+    {
+      id: "term",
+      label: formFieldConfig.term.label,
+      selected: formFieldConfig.term.label,
+      isOpen: false,
+      options: formFieldConfig.term.options
+    },
+    {
+      id: "goal",
+      label: formFieldConfig.goal.label,
+      selected: formFieldConfig.goal.label,
+      isOpen: false,
+      options: formFieldConfig.goal.options
+    },
+    {
+      id: "citizenship",
+      label: formFieldConfig.citizenship.label,
+      selected: formFieldConfig.citizenship.label,
+      isOpen: false,
+      options: formFieldConfig.citizenship.options
+    }
+  ]);
 
   const images = [Swiper_1, Swiper_2, Swiper_3, Swiper_4, Swiper_5];
+
+  useEffect(() => {
+    setFormFields((prev) =>
+      prev.map((field) => {
+        const config = formFieldConfig[field.id];
+        const isCurrentSelectionValid = Array.isArray(config.options) && config.options.includes(field.selected);
+
+        return {
+          ...field,
+          label: config.label,
+          options: config.options,
+          selected: isCurrentSelectionValid ? field.selected : config.label
+        };
+      })
+    );
+  }, [i18n.language]);
+
+  const toggleFormField = (fieldId) => {
+    setFormFields((prev) =>
+      prev.map((field) =>
+        field.id === fieldId ? { ...field, isOpen: !field.isOpen } : { ...field, isOpen: false }
+      )
+    );
+  };
+
+  const selectFormOption = (fieldId, option) => {
+    setFormFields((prev) =>
+      prev.map((field) =>
+        field.id === fieldId ? { ...field, selected: option, isOpen: false } : field
+      )
+    );
+  };
 
   // Projects data
   const projectsData = [
@@ -975,27 +1055,64 @@ function Main() {
         <div className="form__wrapper">
           <div className="form__content">
             <div className="form_text__box">
-              <h4 className="form_title">Обсудить инвестиционный<br />проект с основателем</h4>
-              <p className="form_text">
-                Разбор вашего инвестиционного потенциала и ориентировочного ROI<br />
-                от основателя InmoLux
+              <h4 className="form_title">{t("form.title").split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}</h4>
+              <p className="form_text">{t("form.text").split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
+              
               </p>
             </div>
 
             <div className="form_field_group">
               <ul className="form_menu">
-                <li className="form_item">Бюджет<i className="fa-solid fa-chevron-down form_icon"></i></li>
-                <li className="form_item">Сроки<i className="fa-solid fa-chevron-down form_icon"></i></li>
-                <li className="form_item">Цель<i className="fa-solid fa-chevron-down form_icon"></i></li>
-                <li className="form_item">Гражданство<i className="fa-solid fa-chevron-down form_icon"></i></li>
+                {formFields.map((field) => (
+                  <li key={field.id} className={`form_item ${field.isOpen ? "open" : ""}`}>
+                    <button
+                      type="button"
+                      className="form_field_button"
+                      onClick={() => toggleFormField(field.id)}
+                      aria-expanded={field.isOpen}
+                    >
+                      <span>{field.selected}</span>
+                      <i className={`fa-solid fa-chevron-down form_icon ${field.isOpen ? "open" : ""}`}></i>
+                    </button>
+
+                    <div className={`form_dropdown ${field.isOpen ? "open" : ""}`}>
+                      <ul className="form_dropdown_list">
+                        {field.options.map((option) => (
+                          <li key={option} className="form_dropdown_item">
+                            <button type="button" onClick={() => selectFormOption(field.id, option)}>
+                              {option}
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </li>
+                ))}
               </ul>
 
-              <span className="form_span">Проекты от €5M / Конфиденциально</span>
-              <button className="form_btn" type="button">Запросить консультацию</button>
-              <span className="form_privacy">
-                Отправляя, вы соглашаетесь с политикой<br />
-                конфиденциальности и пользовательским соглашением
-              </span>
+              <span className="form_span">{t("form.span").split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}</span>
+              <button className="form_btn" type="button">{t("form.btn")}</button>
+              <span className="form_privacy">{t("form.privacy").split("\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}</span>
             </div>
           </div>
         </div>

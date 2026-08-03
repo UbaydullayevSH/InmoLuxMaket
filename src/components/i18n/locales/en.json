@@ -311,7 +311,33 @@
         "suptitle_1": "Membership in LPA",
         "suptitle_2": "Andalucia Excelente ",
         "suptitle_3": "Eu Property Awards "
-    }}
+    },
+    "form":{
+        "title":"Discuss investment\nproject with the founder",
+        "text":"Analysis of your investment potential and approximate ROI\nfrom the founder of InmoLux",
+        "span":"Projects from €5M / Confidential",
+        "btn":"Request Consultation",
+        "privacy":"By submitting, you agree to our\nprivacy policy and user agreement",
+        "fields": {
+            "budget": {
+                "label": "Budget",
+                "options": ["€ 5M — 10M", "€ 10M — 25M", "€ 25M +"]
+            },
+            "term": {
+                "label": "Timeline",
+                "options": ["3 — 6 months", "6 — 12 months", "12+ months"]
+            },
+            "goal": {
+                "label": "Goal",
+                "options": ["Capital growth", "Passive income", "Diversification"]
+            },
+            "citizenship": {
+                "label": "Citizenship",
+                "options": ["Europe", "UAE", "USA"]
+            }
+        }
+    }
+}
       
    
 
